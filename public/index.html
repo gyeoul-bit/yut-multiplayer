@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>윷놀이 멀티플레이 V3.1</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main class="wrap">
+<h1>🎲 윷놀이 멀티플레이</h1>
+<p class="sub">PC·모바일에서 링크 하나로 같이 플레이</p>
+<section class="panel">
+<div class="row"><input id="name" maxlength="12" placeholder="닉네임"><button id="create">방 만들기</button></div>
+<div class="row"><input id="room" maxlength="5" placeholder="방 코드"><button id="join">방 참가</button></div>
+<div id="roomInfo" class="info">방을 만들거나 참가하세요.</div>
+<button id="copy" class="secondary" hidden>초대 링크 복사</button>
+</section>
+<section class="game">
+<div id="players" class="players"></div>
+<div class="board" id="board"></div>
+<div class="controls">
+<button id="start">게임 시작</button><button id="roll" disabled>윷 던지기</button><button id="restart" disabled>다시 시작</button>
+</div>
+<div id="status" class="status">대기 중</div>
+<div id="history" class="history"></div>
+</section>
+</main>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>
