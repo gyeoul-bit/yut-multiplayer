@@ -1,0 +1,8 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>친구와 윷놀이 V3</title><link rel="stylesheet" href="style.css"></head><body>
+<main><header><h1>🎲 친구와 윷놀이 <span>V3</span></h1><p>실시간 2~4인 · 잡기 · 업기 · 지름길 · 윷/모 추가 턴</p></header>
+<section id="lobby" class="card"><input id="name" maxlength="12" placeholder="닉네임"><button id="create">방 만들기</button><div class="join"><input id="code" maxlength="6" placeholder="방 코드"><button id="join">참가</button></div><div id="error"></div></section>
+<section id="game" hidden><div class="card topbar"><div>방 <b id="roomCode">-</b><button id="copy">초대 링크 복사</button></div><div id="players"></div></div>
+<div class="card"><div id="board"><div class="line outer"></div><div class="line diag1"></div><div class="line diag2"></div><div class="center">🏁<br><small>완주</small></div><div id="nodes"></div><div id="tokens"></div></div></div>
+<div class="card control"><div id="msg">대기 중</div><div id="yut"></div><div id="sticks"></div><button id="throw">🪵 윷 던지기</button><div id="moves"></div><button id="start">게임 시작</button><button id="reset" hidden>새 게임</button></div>
+<div class="card"><h3>최근 기록</h3><div id="history">-</div></div></section></main>
+<script src="/socket.io/socket.io.js"></script><script src="app.js"></script></body></html>
