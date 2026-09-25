@@ -1,0 +1,18 @@
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;background:#f5f1e8;color:#2d241d}
+.wrap{max-width:900px;margin:auto;padding:22px 14px}
+h1{text-align:center;margin:5px 0}.sub{text-align:center;color:#75695e}
+.panel,.game{background:#fff;border-radius:18px;padding:16px;margin-top:14px;box-shadow:0 6px 20px #0001}
+.row{display:flex;gap:8px;margin:8px 0}
+input{min-width:0;flex:1;padding:12px;border:1px solid #ddd;border-radius:10px;font-size:16px}
+button{border:0;border-radius:10px;padding:11px 16px;background:#3d332b;color:white;font-weight:700;cursor:pointer}
+button:disabled{opacity:.4;cursor:not-allowed}.secondary{margin-top:8px;background:#766657}
+.info,.status{margin-top:10px;padding:10px;background:#f3eee6;border-radius:10px}
+.players{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.player{padding:8px 10px;border-radius:10px;background:#f1eee9;border-left:6px solid}.player.active{box-shadow:0 0 0 2px #c79b4a inset}.player span{font-size:12px;color:#75695e;margin-left:5px}
+.my-pieces{display:flex;gap:7px;flex-wrap:wrap;margin:8px 0 12px}.piece-summary{width:100%;font-size:14px;color:#675a4e}.piece-chip{background:#eee5d6;color:#3d332b;padding:8px 11px;border:1px solid #ddcfbc}.piece-chip.selected{outline:3px solid #d09a2e}.piece-chip.done{opacity:.5;text-decoration:line-through}
+.board{position:relative;width:min(100%,620px);aspect-ratio:274/294;margin:auto;background:url('/yut-board.png') center/100% 100% no-repeat;overflow:hidden}
+.token{position:absolute;width:28px;height:28px;border-radius:50%;border:3px solid white;box-shadow:0 2px 6px #0006;transform:translate(-50%,-50%);z-index:3;color:#fff;font-size:13px;padding:0;display:flex;align-items:center;justify-content:center;line-height:1;min-width:28px}.token-selected{outline:4px solid #f3b51b;z-index:5}.mine-token{cursor:pointer}
+.move-panel{max-width:620px;margin:12px auto 0;padding:12px;border-radius:12px;background:#f8f1e5;text-align:center}.move-actions{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:8px}.merge{background:#9a6a1e}.hidden{display:none!important}
+.controls{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:15px}.history{margin-top:12px;max-height:180px;overflow:auto;background:#faf8f4;border-radius:10px;padding:10px;font-size:14px}
+@media(max-width:600px){.row{flex-direction:column}.row button{width:100%}.wrap{padding:12px}.board{width:100%;max-width:520px}.token{width:23px;height:23px;min-width:23px;font-size:11px;border-width:2px}.piece-chip{padding:7px 9px}}
